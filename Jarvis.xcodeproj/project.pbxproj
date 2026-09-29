@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00000000000000000000001 /* JarvisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000001 /* JarvisApp.swift */; };
+		B00000000000000000000002 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000002 /* AssistantView.swift */; };
+		B00000000000000000000003 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000003 /* AssistantViewModel.swift */; };
+		B00000000000000000000004 /* AIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000004 /* AIClient.swift */; };
+		B00000000000000000000005 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000005 /* SpeechRecognitionService.swift */; };
+		B00000000000000000000006 /* SpeechSynthesisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000006 /* SpeechSynthesisService.swift */; };
+		B00000000000000000000007 /* YouTubeLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000007 /* YouTubeLauncher.swift */; };
+		B00000000000000000000008 /* AppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000008 /* AppIntents.swift */; };
+		B00000000000000000000009 /* AssistantIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000009 /* AssistantIntent.swift */; };
+		B0000000000000000000000A /* AssistantState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000A /* AssistantState.swift */; };
+		B0000000000000000000000B /* CommandRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000B /* CommandRouter.swift */; };
+		B0000000000000000000000C /* YouTubeURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000C /* YouTubeURLBuilder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F00000000000000000000001 /* JarvisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisApp.swift; sourceTree = "<group>"; };
+		F00000000000000000000002 /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
+		F00000000000000000000003 /* AssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
+		F00000000000000000000004 /* AIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIClient.swift; sourceTree = "<group>"; };
+		F00000000000000000000005 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		F00000000000000000000006 /* SpeechSynthesisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesisService.swift; sourceTree = "<group>"; };
+		F00000000000000000000007 /* YouTubeLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeLauncher.swift; sourceTree = "<group>"; };
+		F00000000000000000000008 /* AppIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntents.swift; sourceTree = "<group>"; };
+		F00000000000000000000009 /* AssistantIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantIntent.swift; sourceTree = "<group>"; };
+		F0000000000000000000000A /* AssistantState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantState.swift; sourceTree = "<group>"; };
+		F0000000000000000000000B /* CommandRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandRouter.swift; sourceTree = "<group>"; };
+		F0000000000000000000000C /* YouTubeURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeURLBuilder.swift; sourceTree = "<group>"; };
+		F0000000000000000000000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0000000000000000000000E /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		P00000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G00000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G00000000000000000000003 /* Jarvis */,
+				G00000000000000000000004 /* JarvisCore */,
+				G00000000000000000000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G00000000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (F0000000000000000000000E /* Jarvis.app */);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G00000000000000000000003 /* Jarvis */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000001 /* JarvisApp.swift */,
+				F00000000000000000000002 /* AssistantView.swift */,
+				F00000000000000000000003 /* AssistantViewModel.swift */,
+				F00000000000000000000004 /* AIClient.swift */,
+				F00000000000000000000005 /* SpeechRecognitionService.swift */,
+				F00000000000000000000006 /* SpeechSynthesisService.swift */,
+				F00000000000000000000007 /* YouTubeLauncher.swift */,
+				F00000000000000000000008 /* AppIntents.swift */,
+				F0000000000000000000000D /* Info.plist */,
+			);
+			path = Jarvis;
+			sourceTree = "<group>";
+		};
+		G00000000000000000000004 /* JarvisCore */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000009 /* AssistantIntent.swift */,
+				F0000000000000000000000A /* AssistantState.swift */,
+				F0000000000000000000000B /* CommandRouter.swift */,
+				F0000000000000000000000C /* YouTubeURLBuilder.swift */,
+			);
+			name = JarvisCore;
+			path = Sources/JarvisCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T00000000000000000000001 /* Jarvis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00000000000000000000002 /* Build configuration list for PBXNativeTarget "Jarvis" */;
+			buildPhases = (
+				P00000000000000000000001 /* Sources */,
+				P00000000000000000000003 /* Frameworks */,
+				P00000000000000000000002 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = Jarvis;
+			productName = Jarvis;
+			productReference = F0000000000000000000000E /* Jarvis.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P00000000000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					T00000000000000000000001 = {CreatedOnToolsVersion = 26.0; };
+				};
+			};
+			buildConfigurationList = C00000000000000000000001 /* Build configuration list for PBXProject "Jarvis" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ko;
+			hasScannedForEncodings = 0;
+			knownRegions = (ko, en, Base);
+			mainGroup = G00000000000000000000001;
+			productRefGroup = G00000000000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (T00000000000000000000001 /* Jarvis */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		P00000000000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		P00000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00000000000000000000001 /* JarvisApp.swift in Sources */,
+				B00000000000000000000002 /* AssistantView.swift in Sources */,
+				B00000000000000000000003 /* AssistantViewModel.swift in Sources */,
+				B00000000000000000000004 /* AIClient.swift in Sources */,
+				B00000000000000000000005 /* SpeechRecognitionService.swift in Sources */,
+				B00000000000000000000006 /* SpeechSynthesisService.swift in Sources */,
+				B00000000000000000000007 /* YouTubeLauncher.swift in Sources */,
+				B00000000000000000000008 /* AppIntents.swift in Sources */,
+				B00000000000000000000009 /* AssistantIntent.swift in Sources */,
+				B0000000000000000000000A /* AssistantState.swift in Sources */,
+				B0000000000000000000000B /* CommandRouter.swift in Sources */,
+				B0000000000000000000000C /* YouTubeURLBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C00000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C00000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C00000000000000000000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Jarvis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.jarvisassistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C00000000000000000000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Jarvis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.jarvisassistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C00000000000000000000001 /* Build configuration list for PBXProject "Jarvis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00000000000000000000011 /* Debug */,
+				C00000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00000000000000000000002 /* Build configuration list for PBXNativeTarget "Jarvis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00000000000000000000021 /* Debug */,
+				C00000000000000000000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P00000000000000000000000 /* Project object */;
+}
