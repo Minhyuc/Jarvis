@@ -1,15 +1,18 @@
 import AVFoundation
 import Speech
 
+@MainActor
 final class SpeechRecognitionService {
     enum RecognitionError: LocalizedError {
         case unavailable
         case permissionsDenied
+        case inputUnavailable
 
         var errorDescription: String? {
             switch self {
             case .unavailable: return "한국어 음성 인식을 사용할 수 없습니다."
             case .permissionsDenied: return "마이크와 음성 인식 권한이 필요합니다."
+            case .inputUnavailable: return "사용 가능한 마이크 입력이 없습니다. 이어폰 연결과 통화 상태를 확인해주세요."
             }
         }
     }
@@ -20,6 +23,7 @@ final class SpeechRecognitionService {
     private var task: SFSpeechRecognitionTask?
     private var hasInstalledTap = false
     private var generation = 0
+    private var ownsAudioSession = false
 
     func requestPermissions() async -> Bool {
         let speechAllowed = await withCheckedContinuation { continuation in
@@ -28,21 +32,23 @@ final class SpeechRecognitionService {
             }
         }
 
+        guard speechAllowed, !Task.isCancelled else { return false }
         let microphoneAllowed = await withCheckedContinuation { continuation in
-            AVAudioSession.sharedInstance().requestRecordPermission { allowed in
+            AVAudioApplication.requestRecordPermission { allowed in
                 continuation.resume(returning: allowed)
             }
         }
 
-        return speechAllowed && microphoneAllowed
+        return speechAllowed && microphoneAllowed && !Task.isCancelled
     }
 
     func start(
+        onAudioLevel: @escaping (Double) -> Void,
         onPartial: @escaping (String) -> Void,
         onFinal: @escaping (String) -> Void,
         onError: @escaping (Error) -> Void
     ) throws {
-        stop()
+        stop(deactivateSession: false)
         generation += 1
         let currentGeneration = generation
 
@@ -54,9 +60,10 @@ final class SpeechRecognitionService {
         try session.setCategory(
             .playAndRecord,
             mode: .measurement,
-            options: [.duckOthers, .allowBluetoothHFP, .defaultToSpeaker]
+            options: [.mixWithOthers, .duckOthers, .allowBluetoothHFP, .defaultToSpeaker]
         )
         try session.setActive(true, options: .notifyOthersOnDeactivation)
+        ownsAudioSession = true
 
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
@@ -69,27 +76,44 @@ final class SpeechRecognitionService {
 
         let inputNode = audioEngine.inputNode
         let format = inputNode.outputFormat(forBus: 0)
+        guard format.sampleRate > 0, format.channelCount > 0 else {
+            stop()
+            throw RecognitionError.inputUnavailable
+        }
         inputNode.installTap(onBus: 0, bufferSize: 1_024, format: format) { buffer, _ in
             request.append(buffer)
+            guard let samples = buffer.floatChannelData?.pointee else { return }
+            let frameCount = Int(buffer.frameLength)
+            guard frameCount > 0 else { return }
+            var sumOfSquares: Float = 0
+            for index in 0..<frameCount {
+                let sample = samples[index]
+                sumOfSquares += sample * sample
+            }
+            let rms = sqrt(sumOfSquares / Float(frameCount))
+            let decibels = 20 * log10(max(rms, 0.000_01))
+            onAudioLevel(Double(min(max((decibels + 50) / 50, 0), 1)))
         }
         hasInstalledTap = true
 
         audioEngine.prepare()
-        try audioEngine.start()
+        do { try audioEngine.start() }
+        catch { stop(); throw error }
 
         task = recognizer.recognitionTask(with: request) { [weak self] result, error in
-            guard self?.generation == currentGeneration else { return }
-            if let result {
-                let text = result.bestTranscription.formattedString
-                result.isFinal ? onFinal(text) : onPartial(text)
-            }
-            if let error {
-                onError(error)
+            Task { @MainActor in
+                guard self?.generation == currentGeneration else { return }
+                if let result {
+                    let text = result.bestTranscription.formattedString
+                    result.isFinal ? onFinal(text) : onPartial(text)
+                    if result.isFinal { return }
+                }
+                if let error { onError(error) }
             }
         }
     }
 
-    func stop() {
+    func stop(deactivateSession: Bool = true) {
         generation += 1
         if audioEngine.isRunning {
             audioEngine.stop()
@@ -102,6 +126,9 @@ final class SpeechRecognitionService {
         task?.cancel()
         request = nil
         task = nil
-        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        if deactivateSession, ownsAudioSession {
+            try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+            ownsAudioSession = false
+        }
     }
 }

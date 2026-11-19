@@ -1,8 +1,20 @@
 .DS_Store
+Tools/MacBridge/__pycache__/
 .build/
+.swiftpm/
 DerivedData/
 *.xcuserstate
 xcuserdata/
+*.xcodeproj/project.xcworkspace/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
+# Generated Python bytecode and local runtime credentials
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+auth.json
+JARVISCodexLocal.json

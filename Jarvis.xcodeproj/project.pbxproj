@@ -1,11 +1,36 @@
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
-	classes = {};
+	classes = {
+	};
 	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+        B80000000000000000000001 = {isa = PBXBuildFile; fileRef = F80000000000000000000001; };
+        B80000000000000000000002 = {isa = PBXBuildFile; fileRef = F80000000000000000000002; };
+        B80000000000000000000003 = {isa = PBXBuildFile; fileRef = F80000000000000000000003; };
+        B80000000000000000000004 = {isa = PBXBuildFile; fileRef = F80000000000000000000004; };
+        B80000000000000000000005 = {isa = PBXBuildFile; fileRef = F80000000000000000000005; };
+        B81000000000000000000001 = {isa = PBXBuildFile; fileRef = F81000000000000000000001; };
+        B82000000000000000000001 = {isa = PBXBuildFile; fileRef = F82000000000000000000001; };
+		B70000000000000000000001 = {isa = PBXBuildFile; fileRef = F70000000000000000000001; };
+		B70000000000000000000002 = {isa = PBXBuildFile; fileRef = F70000000000000000000002; };
+		B70000000000000000000003 = {isa = PBXBuildFile; fileRef = F70000000000000000000003; };
+		B70000000000000000000004 = {isa = PBXBuildFile; fileRef = F70000000000000000000004; };
+		B60000000000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F60000000000000000000001 /* Assets.xcassets */; };
+		B50000000000000000000001 /* JarvisAtomReference.png in Resources */ = {isa = PBXBuildFile; fileRef = F50000000000000000000001 /* JarvisAtomReference.png */; };
+        B40000000000000000000001 = {isa = PBXBuildFile; fileRef = F40000000000000000000001; };
+		B30000000000000000000001 /* PersonalAssistantWorkflows.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000001; };
+		B20000000000000000000001 /* CommandPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000001; };
+		B20000000000000000000002 /* CommandPracticeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000002; };
+		B20000000000000000000003 /* CommandPracticeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000003; };
+		B20000000000000000000004 /* CommandPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000004; };
+		B10000000000000000000001 /* NearbyPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000001; };
+		B10000000000000000000002 /* ResponseQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000002; };
+		B10000000000000000000003 /* ImprovementReviewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000003; };
+		B10000000000000000000004 /* ImprovementReviewViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000004; };
+		B10000000000000000000005 /* PersonalAssistantProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000005; };
 		B00000000000000000000001 /* JarvisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000001 /* JarvisApp.swift */; };
 		B00000000000000000000002 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000002 /* AssistantView.swift */; };
 		B00000000000000000000003 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000003 /* AssistantViewModel.swift */; };
@@ -18,9 +43,109 @@
 		B0000000000000000000000A /* AssistantState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000A /* AssistantState.swift */; };
 		B0000000000000000000000B /* CommandRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000B /* CommandRouter.swift */; };
 		B0000000000000000000000C /* YouTubeURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000C /* YouTubeURLBuilder.swift */; };
+		B0000000000000000000000D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000F /* UserProfile.swift */; };
+		B0000000000000000000000E /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000010 /* AppLauncher.swift */; };
+		B0000000000000000000000F /* JarvisWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000011 /* JarvisWatchApp.swift */; };
+		B00000000000000000000010 /* JarvisWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F00000000000000000000012 /* JarvisWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B00000000000000000000011 /* BriefingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000013 /* BriefingService.swift */; };
+		B00000000000000000000012 /* PhoneCallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000015 /* PhoneCallService.swift */; };
+		B00000000000000000000013 /* YouTubeAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000016 /* YouTubeAccountService.swift */; };
+		B00000000000000000000014 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = K00000000000000000000002 /* GoogleSignIn */; };
+		B00000000000000000000015 /* RestaurantRecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000017 /* RestaurantRecommendationService.swift */; };
+		B00000000000000000000016 /* ContactNameMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000018 /* ContactNameMatcher.swift */; };
+		B00000000000000000000017 /* MusicRecognitionShortcutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000019 /* MusicRecognitionShortcutService.swift */; };
+		B00000000000000000000018 /* SystemVolumeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000020 /* SystemVolumeService.swift */; };
+		B00000000000000000000019 /* AlarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000021 /* AlarmService.swift */; };
+		B0000000000000000000001A /* AlarmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000022 /* AlarmStore.swift */; };
+		B0000000000000000000001B /* AlarmSpeechRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000023 /* AlarmSpeechRenderer.swift */; };
+		B0000000000000000000001C /* AlarmViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000024 /* AlarmViews.swift */; };
+		B0000000000000000000001D /* AlarmNaturalLanguageParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000025 /* AlarmNaturalLanguageParser.swift */; };
+		B0000000000000000000001E /* AlarmTimeResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000026 /* AlarmTimeResolver.swift */; };
+		B0000000000000000000001F /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000027 /* NavigationService.swift */; };
+		B00000000000000000000020 /* WebSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000028 /* WebSearchService.swift */; };
+		B00000000000000000000021 /* ConversationMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000029 /* ConversationMemory.swift */; };
+		B00000000000000000000022 /* SafetyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000002A /* SafetyPolicy.swift */; };
+		B00000000000000000000023 /* SafetyControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000002B /* SafetyControls.swift */; };
+		B00000000000000000000024 /* SafetyDevelopmentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000002C /* SafetyDevelopmentGuide.swift */; };
+		B00000000000000000000025 /* AgentOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000002D /* AgentOrchestrator.swift */; };
+		B00000000000000000000026 /* AssistantContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000002E /* AssistantContextManager.swift */; };
+		B00000000000000000000027 /* EvaluationRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000002F /* EvaluationRunner.swift */; };
+		B00000000000000000000028 /* CommandEvaluationCorpus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000030 /* CommandEvaluationCorpus.swift */; };
+		B00000000000000000000029 /* DialogueStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000031 /* DialogueStateManager.swift */; };
+		B0000000000000000000002A /* ToolExecutionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000032 /* ToolExecutionResult.swift */; };
+		B0000000000000000000002B /* NavigationDestinationNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000033 /* NavigationDestinationNormalizer.swift */; };
+		B0000000000000000000002C /* JarvisCalendarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000034 /* JarvisCalendarStore.swift */; };
+		B0000000000000000000002D /* CalendarViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000035 /* CalendarViews.swift */; };
+		B0000000000000000000002E /* JarvisCalendarNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000036 /* JarvisCalendarNotificationService.swift */; };
+		B0000000000000000000002F /* ConversationalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000037 /* ConversationalResponse.swift */; };
+		B00000000000000000000030 /* ProactiveSuggestionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000038 /* ProactiveSuggestionStore.swift */; };
+		B00000000000000000000031 /* ConversationEvaluationCorpus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000039 /* ConversationEvaluationCorpus.swift */; };
+		B00000000000000000000032 /* SpeechEvaluationPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000003A /* SpeechEvaluationPrivacy.swift */; };
+		B00000000000000000000033 /* SpeechEvaluationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000003B /* SpeechEvaluationStore.swift */; };
+		B00000000000000000000034 /* AssistantViewModelE2ETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000003D /* AssistantViewModelE2ETests.swift */; };
+		B00000000000000000000035 /* OpenAIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000003E /* OpenAIResponses.swift */; };
+		B00000000000000000000036 /* LearningProgressEvidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000003F /* LearningProgressEvidence.swift */; };
+		B00000000000000000000037 /* OpenAIIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000040 /* OpenAIIntegration.swift */; };
+		B00000000000000000000038 /* OpenAISettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000041 /* OpenAISettingsView.swift */; };
+		B00000000000000000000039 /* OpenAIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000042 /* OpenAIIntegrationTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		X00000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P00000000000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T00000000000000000000002;
+			remoteInfo = JarvisWatch;
+		};
+		X00000000000000000000002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P00000000000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T00000000000000000000001;
+			remoteInfo = Jarvis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		P00000000000000000000007 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B00000000000000000000010 /* JarvisWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+        F80000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/JarvisCore/SharedProject.swift; sourceTree = SOURCE_ROOT; };
+        F80000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/SharedProjectView.swift; sourceTree = SOURCE_ROOT; };
+        F80000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/JarvisCore/SharedDataSync.swift; sourceTree = SOURCE_ROOT; };
+        F80000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/SharedDataSyncView.swift; sourceTree = SOURCE_ROOT; };
+        F80000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/JarvisCore/CodexLocal.swift; sourceTree = SOURCE_ROOT; };
+        F81000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/JarvisCore/CodexCode.swift; sourceTree = SOURCE_ROOT; };
+        F82000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/JarvisCore/CodexNativeTool.swift; sourceTree = SOURCE_ROOT; };
+		F70000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/JarvisCore/MacWorkspace.swift; sourceTree = SOURCE_ROOT; };
+		F70000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jarvis/MacWorkspaceStore.swift; sourceTree = SOURCE_ROOT; };
+		F70000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jarvis/MacWorkspaceView.swift; sourceTree = SOURCE_ROOT; };
+		F70000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisTests/MacWorkspaceTests.swift; sourceTree = SOURCE_ROOT; };
+		F60000000000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F50000000000000000000001 /* JarvisAtomReference.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JarvisAtomReference.png; sourceTree = "<group>"; };
+        F40000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataExecution.swift; sourceTree = "<group>"; };
+		F30000000000000000000001 /* PersonalAssistantWorkflows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAssistantWorkflows.swift; sourceTree = "<group>"; };
+		F20000000000000000000001 /* CommandPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPractice.swift; sourceTree = "<group>"; };
+		F20000000000000000000002 /* CommandPracticeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPracticeStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000003 /* CommandPracticeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPracticeViews.swift; sourceTree = "<group>"; };
+		F20000000000000000000004 /* CommandPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPracticeTests.swift; sourceTree = "<group>"; };
+		F10000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlaces.swift; sourceTree = "<group>"; };
+		F10000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseQuality.swift; sourceTree = "<group>"; };
+		F10000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementReviewStore.swift; sourceTree = "<group>"; };
+		F10000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementReviewViews.swift; sourceTree = "<group>"; };
+		F10000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAssistantProgressTests.swift; sourceTree = "<group>"; };
 		F00000000000000000000001 /* JarvisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisApp.swift; sourceTree = "<group>"; };
 		F00000000000000000000002 /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		F00000000000000000000003 /* AssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
@@ -35,13 +160,67 @@
 		F0000000000000000000000C /* YouTubeURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeURLBuilder.swift; sourceTree = "<group>"; };
 		F0000000000000000000000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0000000000000000000000E /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0000000000000000000000F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F00000000000000000000010 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
+		F00000000000000000000011 /* JarvisWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisWatchApp.swift; sourceTree = "<group>"; };
+		F00000000000000000000012 /* JarvisWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JarvisWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00000000000000000000013 /* BriefingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingService.swift; sourceTree = "<group>"; };
+		F00000000000000000000015 /* PhoneCallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallService.swift; sourceTree = "<group>"; };
+		F00000000000000000000016 /* YouTubeAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeAccountService.swift; sourceTree = "<group>"; };
+		F00000000000000000000017 /* RestaurantRecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRecommendationService.swift; sourceTree = "<group>"; };
+		F00000000000000000000018 /* ContactNameMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNameMatcher.swift; sourceTree = "<group>"; };
+		F00000000000000000000019 /* MusicRecognitionShortcutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRecognitionShortcutService.swift; sourceTree = "<group>"; };
+		F00000000000000000000020 /* SystemVolumeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemVolumeService.swift; sourceTree = "<group>"; };
+		F00000000000000000000021 /* AlarmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmService.swift; sourceTree = "<group>"; };
+		F00000000000000000000022 /* AlarmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStore.swift; sourceTree = "<group>"; };
+		F00000000000000000000023 /* AlarmSpeechRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSpeechRenderer.swift; sourceTree = "<group>"; };
+		F00000000000000000000024 /* AlarmViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViews.swift; sourceTree = "<group>"; };
+		F00000000000000000000025 /* AlarmNaturalLanguageParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNaturalLanguageParser.swift; sourceTree = "<group>"; };
+		F00000000000000000000026 /* AlarmTimeResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimeResolver.swift; sourceTree = "<group>"; };
+		F00000000000000000000027 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		F00000000000000000000028 /* WebSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchService.swift; sourceTree = "<group>"; };
+		F00000000000000000000029 /* ConversationMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationMemory.swift; sourceTree = "<group>"; };
+		F0000000000000000000002A /* SafetyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPolicy.swift; sourceTree = "<group>"; };
+		F0000000000000000000002B /* SafetyControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyControls.swift; sourceTree = "<group>"; };
+		F0000000000000000000002C /* SafetyDevelopmentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyDevelopmentGuide.swift; sourceTree = "<group>"; };
+		F0000000000000000000002D /* AgentOrchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentOrchestrator.swift; sourceTree = "<group>"; };
+		F0000000000000000000002E /* AssistantContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantContextManager.swift; sourceTree = "<group>"; };
+		F0000000000000000000002F /* EvaluationRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationRunner.swift; sourceTree = "<group>"; };
+		F00000000000000000000030 /* CommandEvaluationCorpus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandEvaluationCorpus.swift; sourceTree = "<group>"; };
+		F00000000000000000000031 /* DialogueStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueStateManager.swift; sourceTree = "<group>"; };
+		F00000000000000000000032 /* ToolExecutionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolExecutionResult.swift; sourceTree = "<group>"; };
+		F00000000000000000000033 /* NavigationDestinationNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestinationNormalizer.swift; sourceTree = "<group>"; };
+		F00000000000000000000034 /* JarvisCalendarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisCalendarStore.swift; sourceTree = "<group>"; };
+		F00000000000000000000035 /* CalendarViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViews.swift; sourceTree = "<group>"; };
+		F00000000000000000000036 /* JarvisCalendarNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisCalendarNotificationService.swift; sourceTree = "<group>"; };
+		F00000000000000000000037 /* ConversationalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationalResponse.swift; sourceTree = "<group>"; };
+		F00000000000000000000038 /* ProactiveSuggestionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProactiveSuggestionStore.swift; sourceTree = "<group>"; };
+		F00000000000000000000039 /* ConversationEvaluationCorpus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationEvaluationCorpus.swift; sourceTree = "<group>"; };
+		F0000000000000000000003A /* SpeechEvaluationPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechEvaluationPrivacy.swift; sourceTree = "<group>"; };
+		F0000000000000000000003B /* SpeechEvaluationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechEvaluationStore.swift; sourceTree = "<group>"; };
+		F0000000000000000000003C /* JarvisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JarvisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0000000000000000000003D /* AssistantViewModelE2ETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModelE2ETests.swift; sourceTree = "<group>"; };
+		F0000000000000000000003E /* OpenAIResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIResponses.swift; sourceTree = "<group>"; };
+		F0000000000000000000003F /* LearningProgressEvidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningProgressEvidence.swift; sourceTree = "<group>"; };
+		F00000000000000000000040 /* OpenAIIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIIntegration.swift; sourceTree = "<group>"; };
+		F00000000000000000000041 /* OpenAISettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAISettingsView.swift; sourceTree = "<group>"; };
+		F00000000000000000000042 /* OpenAIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIIntegrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		P00000000000000000000003 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
-			files = ();
+			files = (
+				B00000000000000000000014 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		P00000000000000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -51,6 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				G00000000000000000000003 /* Jarvis */,
+				G00000000000000000000005 /* JarvisWatch */,
+				G00000000000000000000007 /* JarvisTests */,
+				G00000000000000000000006 /* Shared */,
 				G00000000000000000000004 /* JarvisCore */,
 				G00000000000000000000002 /* Products */,
 			);
@@ -58,13 +240,23 @@
 		};
 		G00000000000000000000002 /* Products */ = {
 			isa = PBXGroup;
-			children = (F0000000000000000000000E /* Jarvis.app */);
+			children = (
+				F0000000000000000000000E /* Jarvis.app */,
+				F00000000000000000000012 /* JarvisWatch.app */,
+				F0000000000000000000003C /* JarvisTests.xctest */,
+			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 		G00000000000000000000003 /* Jarvis */ = {
 			isa = PBXGroup;
 			children = (
+                F80000000000000000000002,
+                F80000000000000000000004,
+				F70000000000000000000002,
+				F70000000000000000000003,
+				F60000000000000000000001 /* Assets.xcassets */,
+				F50000000000000000000001 /* JarvisAtomReference.png */,
 				F00000000000000000000001 /* JarvisApp.swift */,
 				F00000000000000000000002 /* AssistantView.swift */,
 				F00000000000000000000003 /* AssistantViewModel.swift */,
@@ -73,6 +265,32 @@
 				F00000000000000000000006 /* SpeechSynthesisService.swift */,
 				F00000000000000000000007 /* YouTubeLauncher.swift */,
 				F00000000000000000000008 /* AppIntents.swift */,
+				F0000000000000000000000F /* UserProfile.swift */,
+				F00000000000000000000010 /* AppLauncher.swift */,
+				F00000000000000000000015 /* PhoneCallService.swift */,
+				F00000000000000000000016 /* YouTubeAccountService.swift */,
+				F00000000000000000000017 /* RestaurantRecommendationService.swift */,
+				F00000000000000000000019 /* MusicRecognitionShortcutService.swift */,
+				F00000000000000000000020 /* SystemVolumeService.swift */,
+				F00000000000000000000021 /* AlarmService.swift */,
+                F40000000000000000000001 /* LocalDataExecution.swift */,
+				F00000000000000000000022 /* AlarmStore.swift */,
+				F00000000000000000000023 /* AlarmSpeechRenderer.swift */,
+				F00000000000000000000024 /* AlarmViews.swift */,
+				F00000000000000000000027 /* NavigationService.swift */,
+				F00000000000000000000028 /* WebSearchService.swift */,
+				F0000000000000000000002B /* SafetyControls.swift */,
+				F00000000000000000000034 /* JarvisCalendarStore.swift */,
+				F00000000000000000000035 /* CalendarViews.swift */,
+				F00000000000000000000036 /* JarvisCalendarNotificationService.swift */,
+				F00000000000000000000038 /* ProactiveSuggestionStore.swift */,
+				F0000000000000000000003B /* SpeechEvaluationStore.swift */,
+				F00000000000000000000040 /* OpenAIIntegration.swift */,
+				F00000000000000000000041 /* OpenAISettingsView.swift */,
+				F10000000000000000000003,
+				F20000000000000000000002 /* CommandPracticeStore.swift */,
+				F20000000000000000000003 /* CommandPracticeViews.swift */,
+				F10000000000000000000004,
 				F0000000000000000000000D /* Info.plist */,
 			);
 			path = Jarvis;
@@ -81,13 +299,69 @@
 		G00000000000000000000004 /* JarvisCore */ = {
 			isa = PBXGroup;
 			children = (
+                F80000000000000000000001,
+                F80000000000000000000003,
+                F80000000000000000000005,
+                F81000000000000000000001,
+                F82000000000000000000001,
+				F70000000000000000000001,
 				F00000000000000000000009 /* AssistantIntent.swift */,
 				F0000000000000000000000A /* AssistantState.swift */,
 				F0000000000000000000000B /* CommandRouter.swift */,
 				F0000000000000000000000C /* YouTubeURLBuilder.swift */,
+				F00000000000000000000018 /* ContactNameMatcher.swift */,
+				F00000000000000000000025 /* AlarmNaturalLanguageParser.swift */,
+				F00000000000000000000026 /* AlarmTimeResolver.swift */,
+				F00000000000000000000029 /* ConversationMemory.swift */,
+				F0000000000000000000002A /* SafetyPolicy.swift */,
+				F0000000000000000000002C /* SafetyDevelopmentGuide.swift */,
+				F0000000000000000000002D /* AgentOrchestrator.swift */,
+				F0000000000000000000002E /* AssistantContextManager.swift */,
+				F0000000000000000000002F /* EvaluationRunner.swift */,
+				F00000000000000000000030 /* CommandEvaluationCorpus.swift */,
+				F00000000000000000000031 /* DialogueStateManager.swift */,
+				F00000000000000000000032 /* ToolExecutionResult.swift */,
+				F00000000000000000000033 /* NavigationDestinationNormalizer.swift */,
+				F00000000000000000000037 /* ConversationalResponse.swift */,
+				F00000000000000000000039 /* ConversationEvaluationCorpus.swift */,
+				F0000000000000000000003A /* SpeechEvaluationPrivacy.swift */,
+				F0000000000000000000003E /* OpenAIResponses.swift */,
+				F10000000000000000000001,
+				F20000000000000000000001 /* CommandPractice.swift */,
+				F30000000000000000000001 /* PersonalAssistantWorkflows.swift */,
+				F10000000000000000000002,
+				F0000000000000000000003F /* LearningProgressEvidence.swift */,
 			);
 			name = JarvisCore;
 			path = Sources/JarvisCore;
+			sourceTree = "<group>";
+		};
+		G00000000000000000000005 /* JarvisWatch */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000011 /* JarvisWatchApp.swift */,
+			);
+			path = JarvisWatch;
+			sourceTree = "<group>";
+		};
+		G00000000000000000000006 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000013 /* BriefingService.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		G00000000000000000000007 /* JarvisTests */ = {
+			isa = PBXGroup;
+			children = (
+				F70000000000000000000004,
+				F0000000000000000000003D /* AssistantViewModelE2ETests.swift */,
+				F00000000000000000000042 /* OpenAIIntegrationTests.swift */,
+				F10000000000000000000005,
+				F20000000000000000000004 /* CommandPracticeTests.swift */,
+			);
+			path = JarvisTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,13 +374,53 @@
 				P00000000000000000000001 /* Sources */,
 				P00000000000000000000003 /* Frameworks */,
 				P00000000000000000000002 /* Resources */,
+				P00000000000000000000007 /* Embed Watch Content */,
 			);
-			buildRules = ();
-			dependencies = ();
+			buildRules = (
+			);
+			dependencies = (
+				D00000000000000000000001 /* PBXTargetDependency */,
+			);
 			name = Jarvis;
+			packageProductDependencies = (
+				K00000000000000000000002 /* GoogleSignIn */,
+			);
 			productName = Jarvis;
 			productReference = F0000000000000000000000E /* Jarvis.app */;
 			productType = "com.apple.product-type.application";
+		};
+		T00000000000000000000002 /* JarvisWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00000000000000000000003 /* Build configuration list for PBXNativeTarget "JarvisWatch" */;
+			buildPhases = (
+				P00000000000000000000004 /* Sources */,
+				P00000000000000000000005 /* Frameworks */,
+				P00000000000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JarvisWatch;
+			productName = JarvisWatch;
+			productReference = F00000000000000000000012 /* JarvisWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T00000000000000000000003 /* JarvisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00000000000000000000004 /* Build configuration list for PBXNativeTarget "JarvisTests" */;
+			buildPhases = (
+				P00000000000000000000008 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D00000000000000000000002 /* PBXTargetDependency */,
+			);
+			name = JarvisTests;
+			productName = JarvisTests;
+			productReference = F0000000000000000000003C /* JarvisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -118,19 +432,39 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					T00000000000000000000001 = {CreatedOnToolsVersion = 26.0; };
+					T00000000000000000000001 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					T00000000000000000000002 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					T00000000000000000000003 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = T00000000000000000000001;
+					};
 				};
 			};
 			buildConfigurationList = C00000000000000000000001 /* Build configuration list for PBXProject "Jarvis" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = ko;
 			hasScannedForEncodings = 0;
-			knownRegions = (ko, en, Base);
+			knownRegions = (
+				ko,
+				en,
+				Base,
+			);
 			mainGroup = G00000000000000000000001;
 			productRefGroup = G00000000000000000000002 /* Products */;
+			packageReferences = (
+				K00000000000000000000001 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
-			targets = (T00000000000000000000001 /* Jarvis */);
+			targets = (
+				T00000000000000000000001 /* Jarvis */,
+				T00000000000000000000002 /* JarvisWatch */,
+				T00000000000000000000003 /* JarvisTests */,
+			);
 		};
 /* End PBXProject section */
 
@@ -138,7 +472,17 @@
 		P00000000000000000000002 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = ();
+			files = (
+				B60000000000000000000001 /* Assets.xcassets in Resources */,
+				B50000000000000000000001 /* JarvisAtomReference.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		P00000000000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
@@ -148,6 +492,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+                B80000000000000000000001,
+                B80000000000000000000002,
+                B80000000000000000000003,
+                B80000000000000000000004,
+                B80000000000000000000005,
+                B81000000000000000000001,
+                B82000000000000000000001,
+				B70000000000000000000001,
+				B70000000000000000000002,
+				B70000000000000000000003,
 				B00000000000000000000001 /* JarvisApp.swift in Sources */,
 				B00000000000000000000002 /* AssistantView.swift in Sources */,
 				B00000000000000000000003 /* AssistantViewModel.swift in Sources */,
@@ -160,10 +514,92 @@
 				B0000000000000000000000A /* AssistantState.swift in Sources */,
 				B0000000000000000000000B /* CommandRouter.swift in Sources */,
 				B0000000000000000000000C /* YouTubeURLBuilder.swift in Sources */,
+				B0000000000000000000000D /* UserProfile.swift in Sources */,
+				B0000000000000000000000E /* AppLauncher.swift in Sources */,
+				B00000000000000000000011 /* BriefingService.swift in Sources */,
+				B00000000000000000000012 /* PhoneCallService.swift in Sources */,
+				B00000000000000000000013 /* YouTubeAccountService.swift in Sources */,
+				B00000000000000000000015 /* RestaurantRecommendationService.swift in Sources */,
+				B00000000000000000000016 /* ContactNameMatcher.swift in Sources */,
+				B00000000000000000000017 /* MusicRecognitionShortcutService.swift in Sources */,
+				B00000000000000000000018 /* SystemVolumeService.swift in Sources */,
+				B00000000000000000000019 /* AlarmService.swift in Sources */,
+                B40000000000000000000001 /* LocalDataExecution.swift in Sources */,
+				B0000000000000000000001A /* AlarmStore.swift in Sources */,
+				B0000000000000000000001B /* AlarmSpeechRenderer.swift in Sources */,
+				B0000000000000000000001C /* AlarmViews.swift in Sources */,
+				B0000000000000000000001D /* AlarmNaturalLanguageParser.swift in Sources */,
+				B0000000000000000000001E /* AlarmTimeResolver.swift in Sources */,
+				B0000000000000000000001F /* NavigationService.swift in Sources */,
+				B00000000000000000000020 /* WebSearchService.swift in Sources */,
+				B00000000000000000000021 /* ConversationMemory.swift in Sources */,
+				B00000000000000000000022 /* SafetyPolicy.swift in Sources */,
+				B00000000000000000000023 /* SafetyControls.swift in Sources */,
+				B00000000000000000000024 /* SafetyDevelopmentGuide.swift in Sources */,
+				B00000000000000000000025 /* AgentOrchestrator.swift in Sources */,
+				B00000000000000000000026 /* AssistantContextManager.swift in Sources */,
+				B00000000000000000000027 /* EvaluationRunner.swift in Sources */,
+				B00000000000000000000028 /* CommandEvaluationCorpus.swift in Sources */,
+				B00000000000000000000029 /* DialogueStateManager.swift in Sources */,
+				B0000000000000000000002A /* ToolExecutionResult.swift in Sources */,
+				B0000000000000000000002B /* NavigationDestinationNormalizer.swift in Sources */,
+				B0000000000000000000002C /* JarvisCalendarStore.swift in Sources */,
+				B0000000000000000000002D /* CalendarViews.swift in Sources */,
+				B0000000000000000000002E /* JarvisCalendarNotificationService.swift in Sources */,
+				B0000000000000000000002F /* ConversationalResponse.swift in Sources */,
+				B00000000000000000000030 /* ProactiveSuggestionStore.swift in Sources */,
+				B00000000000000000000031 /* ConversationEvaluationCorpus.swift in Sources */,
+				B00000000000000000000032 /* SpeechEvaluationPrivacy.swift in Sources */,
+				B00000000000000000000033 /* SpeechEvaluationStore.swift in Sources */,
+				B00000000000000000000035 /* OpenAIResponses.swift in Sources */,
+				B00000000000000000000036 /* LearningProgressEvidence.swift in Sources */,
+				B00000000000000000000037 /* OpenAIIntegration.swift in Sources */,
+				B00000000000000000000038 /* OpenAISettingsView.swift in Sources */,
+				B10000000000000000000001,
+				B20000000000000000000001 /* CommandPractice.swift in Sources */,
+				B30000000000000000000001 /* PersonalAssistantWorkflows.swift in Sources */,
+				B20000000000000000000002 /* CommandPracticeStore.swift in Sources */,
+				B20000000000000000000003 /* CommandPracticeViews.swift in Sources */,
+				B10000000000000000000002,
+				B10000000000000000000003,
+				B10000000000000000000004,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		P00000000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0000000000000000000000F /* JarvisWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		P00000000000000000000008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70000000000000000000004,
+				B00000000000000000000034 /* AssistantViewModelE2ETests.swift in Sources */,
+				B00000000000000000000039 /* OpenAIIntegrationTests.swift in Sources */,
+				B10000000000000000000005,
+				B20000000000000000000004 /* CommandPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D00000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T00000000000000000000002 /* JarvisWatch */;
+			targetProxy = X00000000000000000000001 /* PBXContainerItemProxy */;
+		};
+		D00000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T00000000000000000000001 /* Jarvis */;
+			targetProxy = X00000000000000000000002 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C00000000000000000000011 /* Debug */ = {
@@ -199,15 +635,16 @@
 		C00000000000000000000021 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A3482BHDP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.jarvisassistant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minhyuc.jarvis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -220,20 +657,103 @@
 		C00000000000000000000022 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A3482BHDP3;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Jarvis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.jarvisassistant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minhyuc.jarvis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C00000000000000000000031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3482BHDP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JARVIS;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.minhyuc.jarvis;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minhyuc.jarvis.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		C00000000000000000000032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3482BHDP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JARVIS;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.minhyuc.jarvis;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minhyuc.jarvis.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		C00000000000000000000041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3482BHDP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minhyuc.jarvis.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jarvis.app/Jarvis";
+			};
+			name = Debug;
+		};
+		C00000000000000000000042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3482BHDP3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minhyuc.jarvis.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jarvis.app/Jarvis";
 			};
 			name = Release;
 		};
@@ -258,7 +778,44 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		C00000000000000000000003 /* Build configuration list for PBXNativeTarget "JarvisWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00000000000000000000031 /* Debug */,
+				C00000000000000000000032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00000000000000000000004 /* Build configuration list for PBXNativeTarget "JarvisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00000000000000000000041 /* Debug */,
+				C00000000000000000000042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		K00000000000000000000001 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		K00000000000000000000002 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = K00000000000000000000001 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = P00000000000000000000000 /* Project object */;
 }
