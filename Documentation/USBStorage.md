@@ -1,22 +1,20 @@
-# JARVIS USB 전용 운영
+# JARVIS 외장 SSD APFS 운영
 
-USB의 `M_H/Jarvis/JARVISStorage.sparsebundle`은 APFS 저장 공간이다. USB를 포맷하지 않았다. 사용량에 따라 늘어나며 최대 64GiB다.
+외장 SSD는 JARVIS(APFS, 100GB)와 MH(exFAT, 나머지 공간)로 나뉜다. 실행 데이터는 `/Volumes/JARVIS/Jarvis`의 일반 파일과 폴더이며 sparsebundle을 연결하지 않는다. MH는 공용 파일 공간으로 JARVIS 실행에 필요하지 않다.
 
-- 앱: `/Volumes/JARVISData/Applications/JARVIS.app`
-- 코드: `/Volumes/JARVISData/Project`
-- 일반 작업 폴더: `/Volumes/JARVISData/Shared` 또는 사용자가 만든 USB 내부 폴더
-- 대화·DB·백업: `/Volumes/JARVISData/Data/ApplicationSupport`
-- 설정: `/Volumes/JARVISData/Data/preferences.plist`
-- Codex 전용 프로필: `/Volumes/JARVISData/Data/CodexLocal/AppServer`
-- 임시 작업: `/Volumes/JARVISData/Data/Temporary`
-- 빌드와 이전 자료: `Builds`, `Archives`
+- 코드: `Project` (실제 `.swift`, `.xcodeproj`, `.git` 파일)
+- 앱: `Applications/JARVIS.app` (macOS 실행 앱은 표준 app 패키지 유지)
+- 대화·DB·백업: `Data/ApplicationSupport`
+- 설정: `Data/preferences.plist`
+- Codex 전용 프로필: `Data/CodexLocal/AppServer`
+- 임시 작업: `Data/Temporary`
+- 일반 프로젝트: `Shared` 또는 APFS 설치 루트 내부의 사용자 작업 폴더
+- 빌드: `Builds`, 보존 자료: `Archives`
 
-앱은 샌드박스를 유지한다. 실행할 때 JARVISData 접근을 직접 허용하며 권한은 이번 실행 동안만 유지한다. 프로젝트·첨부·가져오기·저장은 USB 내부의 일반 작업 폴더만 허용한다. 앱 데이터·앱 자체·빌드·이전 자료 영역과 저장 공간 최상위 전체는 일반 파일/코드 작업에서 보호한다. 모델의 실행·변경·출력 전송 승인은 별도로 유지한다.
+Mac 앱·XPC·Python 서비스·실행 스크립트는 새 루트와 JARVIS 볼륨 UUID를 검증한다. 앱은 샌드박스를 유지하고 실행마다 Jarvis 폴더 접근을 명시적으로 허용한다. 연결 해제·저장 오류 시 작업을 중단하며 Mac 로컬 저장소로 대체하지 않는다. 안전 잠금과 파일 공유·수정·명령 실행 승인은 이전과 동일하다. 실제 실행 담당과 iPhone 데이터 경로는 바꾸지 않는다.
 
-USB가 없으면 실행할 수 없고 연결 해제 또는 저장 오류 시 작업 화면과 활성 작업을 중단한다. 빈 Mac 저장소로 자동 전환하지 않는다. 분리 전 작업을 끝내고 앱·Xcode를 종료한 뒤 JARVISData, USB 순서로 추출한다. 연결 중 강제 분리와 전원 손실은 데이터 손상을 일으킬 수 있으므로 별도 백업을 유지한다. sparsebundle 내부 band 파일은 직접 수정하지 않는다.
+`JARVIS 실행.command`는 앱을, `JARVIS 개발.command`는 Mac Xcode 프로젝트를 연다. 소스는 Finder에서도 일반 파일로 볼 수 있다. 파일 형식이 달라지는 변환이 아니라 APFS 이미지 내부의 파일을 실제 APFS 볼륨으로 복원한 것이다. 앱 자체의 `.app` 패키지는 정상 macOS 형식이다.
 
-새 USB Codex 프로필은 기존 인증 파일을 복사하지 않으며 별도 로그인이 필요하다. 기존 일반 세션 자료는 Data/LegacyCodexProfile에 보존한다. 기존 Mac JARVIS 전용 Codex 로그인은 사용자 확인 후 로그아웃·정리했다. Keychain, OS 폴더 권한·캐시·로그 등 시스템 정보는 Mac에 남을 수 있다. macOS 전체 흔적이 전혀 없는 실행을 보장하지 않는다. Xcode·Python·공식 Codex는 이 Mac의 실행 의존성이다. iPhone 데이터나 iCloud 원본은 이 작업으로 이동·삭제하지 않는다.
+복원 직후 전체 일반 파일을 SHA-256으로 비교하며 결과는 설치 루트의 `restore-verification.json`에 남긴다. 이후 변경한 실행 소스와 재빌드 앱은 원본과 달라진다. 기존 실행 파일과 안내는 `Archives/OriginalLaunchers`에 보관한다. 인증 파일은 읽거나 복사하지 않으며 Codex 로그인은 별도 확인한다. 이전에 선택한 폴더 권한은 재선택이 필요할 수 있다.
 
-USB 폴더의 실행·개발 연결은 USB 확인 후 앱/프로젝트를 연다. 실제 이전 확인은 migration-report.json과 Data/portable-data-migration.json에 남긴다.
-
-검증: Swift 334개, Python 113개, Mac 서명 빌드·unsigned iOS Simulator 빌드·Mac UI 회귀 검증 통과. USB 앱의 권한 선택과 개발 공간 진입을 실제 화면에서 확인했다. 실제 계정의 새 USB Codex 로그인·모델 응답 검증은 사용자 로그인이 필요하며, 강제 분리 시험은 수행하지 않았다.
+분리 전 앱·Xcode를 종료하고 볼륨을 추출한다. Mac에는 Xcode·Python·공식 Codex 실행 의존성과 OS 권한·캐시·로그가 남을 수 있다. iPhone과 iCloud 원본을 이동하거나 삭제하지 않는다. 일반 파일 도구로 Data·Applications·Builds·Archives를 수정하지 못하게 하는 보호를 유지한다.

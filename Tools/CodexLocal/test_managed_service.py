@@ -43,7 +43,7 @@ class PortableBridgeTests(unittest.TestCase):
         cli, native = FakeRunner(), FakeRunner()
         server = local.Bridge(cli, app_server=native)
         try:
-            with patch.dict(os.environ, {"JARVIS_STORAGE_ROOT":"/Volumes/JARVISData"}):
+            with patch.dict(os.environ, {"JARVIS_STORAGE_ROOT":"/Volumes/JARVIS/Jarvis"}):
                 status, value = server.execute("probe",str(uuid.uuid4()),backend="cli")
             self.assertEqual(status,"failed")
             self.assertEqual(cli.calls + native.calls,0)

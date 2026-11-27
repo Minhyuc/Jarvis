@@ -2,7 +2,7 @@
 
 ## 개인용 USB 저장 공간
 
-현재 Mac의 JARVIS 앱·코드·대화·DB·설정·빌드 자료는 USB의 APFS 저장 공간 `/Volumes/JARVISData`에서 관리합니다. USB 전용 앱은 실행 시 저장 공간 권한을 확인하고 연결 해제·저장 오류 시 작업을 중단하며 Mac 저장소로 대체하지 않습니다. USB 폴더의 실행·개발 연결과 로컬에 남기는 실행 자료, 분리 순서는 [USB 저장 공간 안내](Documentation/USBStorage.md)를 확인하세요. iPhone/iCloud 동기화와 로그인·안전 설정은 변경하지 않습니다.
+현재 Mac의 JARVIS 앱·코드·대화·DB·설정·빌드 자료는 외장 SSD의 APFS 일반 폴더 `/Volumes/JARVIS/Jarvis`에서 관리합니다. USB 전용 앱은 실행 시 저장 공간 권한을 확인하고 연결 해제·저장 오류 시 작업을 중단하며 Mac 저장소로 대체하지 않습니다. USB 폴더의 실행·개발 연결과 로컬에 남기는 실행 자료, 분리 순서는 [USB 저장 공간 안내](Documentation/USBStorage.md)를 확인하세요. iPhone/iCloud 동기화와 로그인·안전 설정은 변경하지 않습니다.
 
 ## 대화형 코드 작업과 채팅 승인
 

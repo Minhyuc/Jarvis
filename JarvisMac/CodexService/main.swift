@@ -51,9 +51,9 @@ final class Service: NSObject, NSXPCListenerDelegate, JARVISCodexServiceProtocol
             child.currentDirectoryURL = URL(fileURLWithPath: NSTemporaryDirectory())
             if let appBundle = Bundle(url: Bundle.main.bundleURL.deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()),
                (appBundle.bundleIdentifier == "com.minhyuc.jarvis.mac" || appBundle.object(forInfoDictionaryKey: "JARVISPortable") as? Bool == true || appBundle.object(forInfoDictionaryKey: "JARVISPortable") as? String == "YES") {
-                let root = URL(fileURLWithPath: "/Volumes/JARVISData")
+                let root = URL(fileURLWithPath: "/Volumes/JARVIS/Jarvis")
                 guard appBundle.bundleURL.path.hasPrefix(root.path + "/"),
-                      (try? root.resourceValues(forKeys: [.volumeUUIDStringKey]).volumeUUIDString) == "FCFEB613-D061-4178-AC9B-9422B413AD3A" else {
+                      (try? root.resourceValues(forKeys: [.volumeUUIDStringKey]).volumeUUIDString) == "8B1F8F32-6526-49B0-8C21-9C472EB5D8E8" else {
                     reply(nil, "JARVIS USB 저장 공간을 확인하지 못했습니다."); return
                 }
                 let temporary = root.appendingPathComponent("Data/Temporary")

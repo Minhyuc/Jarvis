@@ -537,7 +537,7 @@ public enum JarvisStorage {
     public static func revoke() { lock.lock(); active = nil; lock.unlock() }
     public static var preferences: UserDefaults { portable ? store?.preferences ?? pending : .standard }
     public static var support: URL {
-        if portable { return (store?.root ?? URL(fileURLWithPath: "/Volumes/JARVISData")).appendingPathComponent("Data/ApplicationSupport") }
+        if portable { return (store?.root ?? URL(fileURLWithPath: "/Volumes/JARVIS/Jarvis")).appendingPathComponent("Data/ApplicationSupport") }
         return FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
     }
     public static func permits(_ url: URL) -> Bool {

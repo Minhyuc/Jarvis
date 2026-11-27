@@ -10,7 +10,7 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
-# Generated Python bytecode and local runtime credentials
+# Generated caches and local credentials
 __pycache__/
 *.py[cod]
 .env

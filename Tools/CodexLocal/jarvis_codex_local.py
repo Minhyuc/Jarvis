@@ -642,7 +642,7 @@ def main():
     from jarvis_app_server import AppServerRunner, private_home
     if os.environ.get("JARVIS_STORAGE_ROOT"):
         root = Path(os.environ["JARVIS_STORAGE_ROOT"])
-        if str(root) != "/Volumes/JARVISData" or root.is_symlink() or root.stat().st_dev != Path(__file__).stat().st_dev:
+        if str(root) != "/Volumes/JARVIS/Jarvis" or root.is_symlink() or root.stat().st_dev != Path(__file__).stat().st_dev:
             parser.error("The JARVIS USB store is unavailable; no desktop fallback is permitted.")
         directory = private_home(root / "Data" / "CodexLocal")
     app_server = AppServerRunner(runner.binary, directory / "AppServer")
